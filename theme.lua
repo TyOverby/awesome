@@ -11,7 +11,7 @@ local current_dir = awful.util.get_configuration_dir()
 
 local theme = {}
 
-theme.font          = "sans 6"
+theme.font          = "sans 10"
 
 theme.bg_normal     = "#202020"
 theme.bg_focus      = "#404040"
@@ -24,7 +24,7 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(4)
+theme.useless_gap   = dpi(8)
 theme.border_width  = dpi(2)
 theme.border_normal = "#000000"
 theme.border_focus  = "#999999"

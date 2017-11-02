@@ -47,8 +47,8 @@ end
 beautiful.init(awful.util.get_configuration_dir() .. "theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
-editor = os.getenv("EDITOR") or "editor"
+terminal = "alacritty"
+editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -187,7 +187,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({"work", "stats", "comms", "media"}, s, awful.layout.layouts[1])
+    awful.tag({"edit", "term", "web", "comms", "media"}, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -586,5 +586,9 @@ client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal 
     c.opacity = 0.8 
 end)
+
+-- These are run every time that awesome is reloaded, so don't do stupid shit!
+awful.spawn("xset r rate 200 25")
+awful.spawn("xrandr --output DP1 --auto --output DP2 --auto --right-of DP1 --output HDMI1 --auto --right-of DP2")
 
 -- }}}
