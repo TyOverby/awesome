@@ -24,8 +24,8 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(8)
-theme.border_width  = dpi(2)
+theme.useless_gap   = dpi(0)
+theme.border_width  = dpi(0)
 theme.border_normal = "#000000"
 theme.border_focus  = "#999999"
 theme.border_marked = "#91231c"
@@ -64,6 +64,12 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
+
+theme.titlebar_bg_focus = "#3355FF"
+theme.titlebar_fg_focus = "#3355FF"
+
+theme.titlebar_bg = "#262626"
+theme.titlebar_fg = "#262626"
 
 -- You can add as many variables as
 -- you wish and access them by using
