@@ -65,8 +65,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 theme.menu_height = dpi(15)
 theme.menu_width  = dpi(100)
 
-theme.titlebar_bg_focus = "#3355FF"
-theme.titlebar_fg_focus = "#3355FF"
+theme.titlebar_bg_focus = "#FF3355"
+theme.titlebar_fg_focus = "#FF3355"
 
 theme.titlebar_bg = "#262626"
 theme.titlebar_fg = "#262626"

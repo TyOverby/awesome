@@ -213,8 +213,8 @@ awful.screen.connect_for_each_screen(function(s)
     s.mywibox = awful.wibar { 
         position = "bottom", 
         screen = s,
-        stretch = false,
-        width = "25%",
+        stretch = true,
+        height = dpi(20),
         type = "desktop"
     } 
 
@@ -545,7 +545,7 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c, { size = dpi(2) }) 
+    awful.titlebar(c, { size = dpi(3) }) 
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -568,6 +568,6 @@ end)
 
 -- These are run every time that awesome is reloaded, so don't do stupid shit!
 awful.spawn("xset r rate 200 25")
-awful.spawn("xrandr --output DP1 --auto --output DP2 --auto --right-of DP1 --output HDMI1 --auto --right-of DP2")
+awful.spawn("xrandr --output DP-5 --auto --output DP-4 --auto --right-of DP-5 --output DP-7 --auto --right-of DP-4")
 
 -- }}}
